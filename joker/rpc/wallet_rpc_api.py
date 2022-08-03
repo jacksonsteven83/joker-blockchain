@@ -1709,6 +1709,8 @@ class WalletRpcApi:
                     continue
                 pool_reward_amount += record.amount
             height = record.height_farmed(self.service.constants.GENESIS_CHALLENGE)
+            # Do not need to calculate the Community Rewards Amount To Wallet Card
+            # 只添加了一行代码,余下的代码只是做了缩进
         if (uint64(calculate_base_community_reward(height)) != uint64(record.amount)):
             if record.type == TransactionType.FEE_REWARD:
                 fee_amount += record.amount - calculate_base_farmer_reward(height)
