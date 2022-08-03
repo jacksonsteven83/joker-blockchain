@@ -1,0 +1,9 @@
+{
+  "dest": "final_installer/",
+  "bin": "joker-blockchain",
+  "name": "joker-blockchain",
+  "scripts": {
+    "postinst": "assets/deb/postinst.sh",
+    "prerm": "assets/deb/prerm.sh"
+  }
+}
